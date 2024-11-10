@@ -1,0 +1,209 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7); /* Background gradient */
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #444;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #feb47b;
+}
+
+/* Main Section */
+#about-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Image Section */
+#about-content .image {
+    flex: 40%; /* Image section takes 40% of the space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center images */
+}
+
+.image-item {
+    margin-bottom: 20px;
+    width: 40%;
+    text-align: center; /* Center text links below images */
+}
+
+#about-content .image img {
+    max-width: 80%; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Content Section */
+.content {
+    flex: 60%; /* Content section takes 60% of the space */
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+}
+
+/* Column Layout */
+.column {
+    width: 48%; /* Set columns to 48% to allow for spacing */
+}
+
+/* Article */
+article {
+    margin-bottom: 20px; 
+}
+
+#photo {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+#screen {
+    max-width: 100%; 
+    height: auto;
+}
+
+/* Aside */
+aside {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for aside */
+    margin-left: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    header h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add margin between stacked links */
+    }
+
+    /* Main Section */
+    #about-content {
+        flex-direction: column; /* Stack image and content */
+        padding: 15px;
+    }
+
+    /* Image Section */
+    #about-content .image {
+        flex: 100%; /* Image section takes full width */
+    }
+
+    #about-content .image img {
+        max-width: 100%; /* Full width images for mobile */
+    }
+
+    /* Content Section */
+    .content {
+        flex: 100%; /* Full width content section */
+        flex-direction: column; /* Stack content columns */
+    }
+
+    .column {
+        width: 100%; /* Full width columns */
+        margin-bottom: 20px; /* Space between stacked columns */
+    }
+
+    /* Aside */
+    aside {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 0;
+    }
+}
+
+/* Desktop View (min-width: 769px) */
+@media (min-width: 769px) {
+    /* Main Section */
+    #about-content {
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    /* Image Section */
+    #about-content .image {
+        flex: 40%; /* Image section takes 40% */
+    }
+
+    /* Content Section */
+    .content {
+        flex: 60%; /* Content section takes 60% */
+        flex-direction: row; /* Horizontal content layout */
+    }
+
+    .column {
+        width: 48%; /* Keep column width at 48% for spacing */
+    }
+
+    /* Aside */
+    aside {
+        margin-left: 30px; /* Keep margin between content and aside */
+    }
+}

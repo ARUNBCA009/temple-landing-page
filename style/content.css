@@ -1,0 +1,175 @@
+/* Basic styling */
+#carousel {
+    padding: 60px 15px;
+}
+
+/* Navigation */
+#navdiv {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    padding: 10px 0;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+}
+
+#nav li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #333;
+}
+
+/* Carousel */
+#carousel h1 {
+    margin-bottom: 40px;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    width: 40%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth transition for fade-in */
+}
+
+.carousel-item.active img {
+    opacity: 1;
+}
+
+.carousel-caption {
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    color: white;
+}
+
+.carousel-caption a {
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Add an animation to the images */
+.carousel-item {
+    position: relative;
+    display: none; /* Hide all slides initially */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block; /* Show the active slide */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Carousel */
+    .carousel-item img {
+        width: 100%; /* Full width images on mobile */
+        height: 250px; /* Reduce height for smaller screens */
+    }
+
+    .carousel-caption {
+        width: 90%; /* Caption takes more space on mobile */
+        bottom: 10px;
+        font-size: 14px; /* Smaller text size */
+    }
+
+    .carousel-caption a {
+        padding: 8px 15px; /* Smaller button size */
+        font-size: 12px;
+    }
+
+    .carousel-container {
+        max-width: 100%; /* Full width container for mobile */
+    }
+
+    .carousel-control {
+        padding: 5px; /* Smaller controls on mobile */
+        font-size: 16px;
+    }
+}
+
+/* Desktop View (min-width: 769px) */
+@media (min-width: 769px) {
+    /* Carousel */
+    .carousel-item img {
+        height: 400px; /* Maintain larger image height on desktop */
+        width: 40%; /* Maintain image size as per desktop design */
+    }
+
+    .carousel-caption {
+        width: 50%; /* Center caption in desktop view */
+        font-size: 16px;
+    }
+
+    .carousel-caption a {
+        padding: 10px 20px; /* Larger button size for desktop */
+        font-size: 14px;
+    }
+
+    .carousel-container {
+        max-width: 500px; /* Limit carousel width for desktop */
+    }
+
+    .carousel-control {
+        padding: 10px; /* Larger controls on desktop */
+        font-size: 18px;
+    }
+}

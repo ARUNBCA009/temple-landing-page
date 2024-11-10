@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* Portfolio Section */
+        #carousel {
+            padding: 60px 15px;
+            background-color: #f8f9fa;
+        }
+
+        /* Carousel Images */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+        /* Carousel Control Arrows */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+        /* Dots Indicators Styling */
+        .carousel-indicators li {
+            background-color: #007bff;
+        }
+
+        .carousel-indicators .active {
+            background-color: #0056b3;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        /* Link Styling */
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Container for Content Below Carousel */
+        .content-section {
+            padding: 40px 15px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        #navdiv {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    padding: 10px 0;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+}
+
+#nav li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="navdiv">
+        <nav id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Specials</a></li>
+            <li><a href="#">History</a></li>
+        </nav>
+    </div>
+
+
+     <p> The temple performs six poojas every day: Irandam Kalam, Artha Jamam, Uchikalam Sayaratchai, Kalai Santhi, and Ushakkalam. On Tuesdays and Fridays, there are also weekly poojas, such as Sahasranamam and Lalitha Thiruchathi archanas. </p>
+     <p> <b>this are the famous festivals</b> </p>
+
+    <!-- Carousel Section -->
+    <section id="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/cor1.jfif" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/cor2.jfif" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/cor3.jfif" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+<a href="images/சந்தன_மல்லிகையில்_Santhana_Malligaiyil_Male_Version_HD_Video_Song.m4a"> check audio</a>
+    <!-- Content Section Below Carousel -->
+    <section class="content-section">
+        <p>
+            A total of 6 Poojas are done on a daily basis in the Thirumanancheri Temple. Poojas such as Ushakkalam, Kalai Santhi, Uchikalam, Sayaratchai, Irandam Kalam, and Artha Jamam. Weekly poojas, including Sahasranamam and Lalitha Thiruchathi Archana, are also conducted on Tuesdays and Fridays.
+        </p>
+        <div id="pdf">
+            <a href="Map route.pdf">Click here for Map Route</a>
+        </div>
+    </section>
+
+    <footer> &copy; RM ARUN SINCE 2024</footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Automatically move slides every 3 seconds
+        var myCarousel = document.querySelector('#carouselExampleIndicators');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000, // Slide every 3 seconds
+            ride: 'carousel'
+        });
+    </script>
+
+</body>
+</html>
